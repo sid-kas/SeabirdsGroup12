@@ -1,0 +1,14 @@
+  
+version: '2.3'
+
+services:
+  darknet_server:
+    build: .
+    restart: unless-stopped
+    runtime: nvidia
+    container_name: darknet_python_server_ver1
+    image: darknet_server
+    ports:
+      - 5656:5656
+    volumes:
+      - /home/grupp8/data:/data
