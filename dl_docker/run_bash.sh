@@ -15,7 +15,7 @@ nvidia-docker run \
 	--env="USER=${USER}" \
 	--env="HOME=${HOME}" \
 	-p 5005:6006 \
-	-p 9876:8888 \
+	-p 9889:8888 \
 	--cap-add SYS_ADMIN \
 	--cap-add MKNOD \
 	--device /dev/fuse \

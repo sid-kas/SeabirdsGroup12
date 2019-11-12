@@ -20,9 +20,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     wget \
     nano \
     vim \
-    libfreetype6-dev \
-    libpng12-dev \
-    libzmq3-dev \
     git \
     python-numpy \
     python-dev \
@@ -31,7 +28,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     zlib1g-dev \
     libjpeg-dev \
     xvfb \
-    libav-tools \
     xorg-dev \
     libboost-all-dev \
     libsdl2-dev \
@@ -70,20 +66,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     htop \
     apt-transport-https
 
-# install the necessary software
-# RUN apt-get update \
-#     && apt-get install -qy \
-#     build-essential \
-#     apt-utils \
-#     ca-certificates \
-#     curl \
-#     software-properties-common \
-#     python3-dev \
-#     python3-pip \
-#     cmake \
-#     swig \
-#     wget \
-#     unzip
 
 # TensorBoard
 EXPOSE 6006
