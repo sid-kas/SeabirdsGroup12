@@ -2,8 +2,8 @@
 
 USER_UID=$(id -u)
 USER_GID=$(id -g)
-name="seabird_docker_all"
-
+name="seabirds_bash"
+docker rm "$name"
 nvidia-docker run \
 	-it \
 	--init \
@@ -14,11 +14,11 @@ nvidia-docker run \
 	--env="USER_GID=${USER_GID}" \
 	--env="USER=${USER}" \
 	--env="HOME=${HOME}" \
-	-p 6006:6006 \
-	-p 8888:8888 \
+	-p 5005:6006 \
+	-p 9876:8888 \
 	--cap-add SYS_ADMIN \
 	--cap-add MKNOD \
 	--device /dev/fuse \
 	--security-opt apparmor:unconfined \
 	--name "$name" \
-    ufoym/deepo:all-jupyter-py36-cu100 bash
+    seabirds_group12:latest bash

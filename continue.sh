@@ -1,1 +1,0 @@
-nvidia-docker start -i seabird_docker_all
