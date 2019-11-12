@@ -12,3 +12,6 @@ continue the same container: bash continue.sh
 
 autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -NL 0.0.0.0:9876:localhost:9876 grupp9@dgx.cgit.se
 
+jupyternotebook: 
+ssh -T -f -NL localhost:8888:localhost:8888 grupp9@dgx.cgit.se 
+pass: nextcloud9
